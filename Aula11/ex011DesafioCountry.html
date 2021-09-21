@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="10;url=http://127.0.0.1:3002/.vscode/Aula11/ex011DesafioCountry.html"> -->
+    
+    <title>Sistema Teste de Nacionalidade</title>
+
+    <style>
+        body{
+        
+        font: white 18pt Arial;
+        background: rgb(175, 124, 14);
+        margin: center;
+        width: auto;
+        height: auto;
+        } 
+    
+        .titulo {
+        color: rgb(8, 5, 0);
+        font: normal 20pt Arial;
+        /*line-height:  25px;*/
+        text-align: center; 
+        width: auto;
+        height: 50px;
+        }
+
+        input{
+        background: rgb(238, 232, 232);
+        color: rgb(0, 7, 0);
+
+        }
+
+        .menu{
+        color: rgb(7, 20, 2);
+        font: normal 13pt Arial;
+        color:rgb(52, 180, 74);
+        background: rgb(2, 36, 9); 
+        border-style :solid;
+        width: auto;
+        height: 250px;
+        line-height:  22px;
+        text-align: center; 
+       
+        }
+    
+        .post {
+        color: rgb(255, 212, 22);
+        font: normal 10pt Arial;
+        color:rgb(223, 184, 184);
+        background: rgb(2, 36, 9);
+        border-style:double;
+        width: auto;
+        height: 40px;
+        line-height:  40px;
+        text-align: left; 
+        }
+         
+    </style>
+
+</head>
+
+    
+<body>
+
+    <p class="titulo">Sistema de Triagem:<br> Estrangeiros </p>
+    <p class="menu"> Paises Cadastrados : <br>
+                1  - Israel - ISR <br>
+                2  - Estados Unidos - USA <br>
+                3  - França - FNC <br>
+                4  - Ingraterra - IGT <br>
+                5  - Alemanha  - ALM <br>
+                6  - Brasil  - BRL <br>
+                7  - Japão - JP <br>
+                8  - Korea do Sul - KS <br>
+                9  - China - PCC <br>
+                10 - União Soviética  - CCP <br>
+
+    </p>
+    <p class="post"> Escreva País de Origem:<input type="string" name="txtnac" id="txtnac" >   
+     <input type="button" id="txtnac" value="Verificar" onclick="estadocivico()" > 
+ 
+
+    <div id="country" >
+
+    </div>
+    
+    <script >
+
+  
+        function atualizar() {
+        onload="javascript:autoRefresh(1000);"                            // faz a lógica desejada...
+        }
+            
+       
+        function estadocivico(){
+        
+        var txtn = window.document.querySelector('input#txtnac')
+        var country = window.document.querySelector('div#country')
+        finalnac = String(txtn.value) 
+            
+            
+            //if(name.toLowerCase().indexOf("carro") !== -1) 
+
+            //if(name.toLowerCase().indexOf("Carro".toLowerCase())!=-1)
+            if (finalnac.toLowerCase().indexOf("brasil".toLowerCase()) !=-1 ||finalnac.toLowerCase().indexOf("brl".toLowerCase()) !=-1 )  {
+                
+                var regiao = 'Brasileiro' 
+                country.innerHTML += `<h2> Você é <strong> ${regiao}!! </strong> <br> Não precisa de Triagem </p> </h2>` 
+                
+            }else{
+                
+                if (finalnac.toLowerCase().indexOf("israel".toLowerCase()) !=-1 ||finalnac.toLowerCase().indexOf("isr".toLowerCase()) !=-1 ) {
+                    var regiao = 'Israel' 
+                    country.innerHTML += `<h4> <h3> האם אתה מ </h3> (You are From)<strong>${regiao}</strong> <br> Estatus : <strong> Estrangeiro </strong> </h4>`
+                    country.innerHTML += `<h4> <strong> <h3> ברוך הבא!! </h3> </strong> - Seja Bem Vindo!! </h4>`
+                }else{
+
+                    if (finalnac.toLowerCase().indexOf("estados unidos".toLowerCase()) !=-1 ||finalnac.toLowerCase().indexOf("usa".toLowerCase()) !=-1 ){
+                    var regiao = 'Estados Unidos' 
+                    country.innerHTML += `<h4>You are From<strong>${regiao}</strong> <br> Estatus : <strong> Estrangeiro </strong> </h4>`
+                    country.innerHTML += `<h4> <strong> Welcome!!</strong> - Seja Bem Vindo!!  </h4>`
+                    }else{
+
+                        if (finalnac.toLowerCase().indexOf("frança".toLowerCase()) !=-1 ||finalnac.toLowerCase().indexOf("fnc".toLowerCase()) !=-1 ) {
+                        var regiao = 'França' 
+                        country.innerHTML += `<h4> Viens-tu de (You are From)<strong>${regiao}</strong> <br> Estatus : <strong> Estrangeiro </strong> </h4>`
+                        country.innerHTML += `<h4> <strong> Bienvenue!!</strong> -  Seja Bem Vindo!! </h4>`
+                        }else{
+
+                            if (finalnac.toLowerCase().indexOf("ingraterra".toLowerCase()) !=-1 ||finalnac.toLowerCase().indexOf("IGT".toLowerCase()) !=-1 ) {
+                            var regiao = 'Ingraterra' 
+                            country.innerHTML += `<h4>You are From<strong>${regiao}</strong> <br> Estatus : <strong> Estrangeiro </strong> </h4>`
+                            country.innerHTML += `<h4> <strong> Welcome!! - Seja Bem Vindo!! </h4>`
+                            }else{
+
+                                if (finalnac =='Alemanha' || finalnac == 'ALM' || 
+                                    finalnac =='Suecia'   || finalnac == 'SUC' ||
+                                    finalnac =='Japão'    || finalnac == 'JP'  || 
+                                    finalnac =='Korea do Sul' || finalnac == 'KS' ||
+                                    finalnac =='China' || finalnac == 'CN' || 
+                                    finalnac =='União Soviética' || finalnac == 'CCP') 
+                                {
+                                    country.innerHTML += `<h2><strong>Este Modulo está em Desenvolvimneto</strong>  </h2>` 
+                                }else{
+                                    country.innerHTML += `<h2><strong>País não Cadastrado </strong>  </h2>` 
+                                }
+                            }
+                        }
+                    }
+                }    
+            }
+                                
+        }
+
+        
+    </script>
+
+</body>
+</html>

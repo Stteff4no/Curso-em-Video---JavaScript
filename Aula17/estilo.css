@@ -1,0 +1,72 @@
+body {
+
+    background: rgb(146, 98, 25);
+    font:  normal 15 pt Arial;
+
+}
+
+
+header {
+    color: rgb(4, 2, 14); 
+    text-align: center;
+    padding: 2px;
+    width: auto;
+    margin: 2pt ;
+    text-shadow: 4 black;
+
+
+
+}
+
+section{
+    background: white; 
+    border-radius:10px;
+    padding: 15px;
+    width: auto;
+    margin: auto;
+    box-shadow: 4px 4px 10px rgb(0, 0, 0);
+   
+
+}
+
+div{
+    color: rgb(250, 252, 249); 
+    background: rgb(9, 12, 185); 
+    padding: 2px;
+    width: auto;
+    margin: 15t ;
+    font-style: normal 24pt Arial;
+    text-align: center;
+       
+}
+
+select{
+    background: rgb(40, 176, 194); 
+    padding: 2px;
+    width: 200pt ;
+    margin: 20 pt ;
+    font-style: normal 15pt Arial;
+    text-align: left;
+    
+}
+
+p{
+    color: rgb(1, 3, 0); 
+    background: rgb(86, 134, 197); 
+    padding: 15px;
+    width: auto;
+    margin: 10pt ;
+    font-style: noral 16pt Arial;
+    text-align: center;
+    
+}
+
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 2px black;
+    
+
+}

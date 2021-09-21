@@ -1,0 +1,60 @@
+body {
+
+    background: rgb(56, 93, 172);
+    font:  normal 15 pt Arial;
+
+}
+
+
+header {
+    color: rgb(27, 12, 95); 
+    text-align: center;
+    padding: 2px;
+    width: auto;
+    margin: 2pt ;
+    text-shadow: 4 black;
+
+
+
+}
+
+section{
+    background: white; 
+    border-radius:10px;
+    padding: 15px;
+    width: auto;
+    margin: auto;
+    box-shadow: 4px 4px 10px rgb(0, 0, 0);
+   
+
+}
+
+div{
+    background: rgb(23, 150, 209); 
+    padding: 2px;
+    width: auto;
+    margin: 1pt ;
+    font-style: normal 12pt Arial;
+    text-align: right;
+    
+}
+
+p{
+    background: rgb(86, 134, 197); 
+    padding: 2px;
+    width: auto;
+    margin: 1pt ;
+    font-style: normal 12pt Arial;
+    text-align: left;
+    
+}
+
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 2px black;
+    text-align: center;
+
+}
